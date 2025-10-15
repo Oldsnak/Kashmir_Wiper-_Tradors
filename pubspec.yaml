@@ -1,0 +1,66 @@
+name: kashmir_wiper_tradors
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  toggle_switch: ^2.3.0
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  curved_navigation_bar: ^1.0.6
+  percent_indicator: ^4.2.5
+  provider: ^6.1.5
+  iconsax_flutter: ^1.0.1
+  get: ^4.7.2
+  http: ^1.4.0
+  intl: ^0.20.2
+  logger: ^2.6.0
+  url_launcher: ^6.3.2
+  get_storage: ^2.1.1
+  carousel_slider: ^5.1.1
+  flutter_native_splash: ^2.4.6
+  smooth_page_indicator: ^1.2.1
+  readmore: ^3.0.0
+  flutter_rating_bar: ^4.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.3
+  flutter_lints: ^6.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/app icon.png
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/on_boarding_images/
+    - assets/icons/
+    - assets/icons/categories/
+    - assets/logos/
+    - assets/images/banners/
+    - assets/images/products/
+    - assets/images/user/
+    - assets/images/reviews/
+    - assets/icons/payment_methods/
+
+  fonts:
+    - family: Inovation
+      fonts:
+        - asset: assets/fonts/Inovation.ttf
+

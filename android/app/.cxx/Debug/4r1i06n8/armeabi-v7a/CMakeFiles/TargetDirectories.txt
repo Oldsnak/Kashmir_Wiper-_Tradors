@@ -1,0 +1,2 @@
+C:/Users/bazur/Downloads/Kashmir_Wiper_Tradors/android/app/.cxx/Debug/4r1i06n8/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/bazur/Downloads/Kashmir_Wiper_Tradors/android/app/.cxx/Debug/4r1i06n8/armeabi-v7a/CMakeFiles/rebuild_cache.dir
