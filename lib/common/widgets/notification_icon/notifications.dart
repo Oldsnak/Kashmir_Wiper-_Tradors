@@ -3,6 +3,8 @@ import 'package:kashmir_wiper_tradors/utils/constants/colors.dart';
 import 'package:kashmir_wiper_tradors/utils/constants/sizes.dart';
 import 'package:kashmir_wiper_tradors/utils/helpers/helper_functions.dart';
 import '../custom_appbar/appbar.dart';
+import 'package:kashmir_wiper_tradors/common/widgets/snack_bar/GlossySnackBar.dart';
+
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
@@ -30,16 +32,25 @@ class _NotificationScreenState extends State<NotificationScreen> {
           final item = notifications[index];
 
           return Dismissible(
-            key: Key(item), // unique key for each item
-            direction: DismissDirection.horizontal, // allow left & right swipe
+            key: Key(item),
+            direction: DismissDirection.horizontal,
             onDismissed: (direction) {
               setState(() {
                 notifications.removeAt(index);
               });
 
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text("$item dismissed")),
-              );
+              if (direction == DismissDirection.startToEnd) {
+                GlossySnackBar.show(
+                  context,
+                  message: "$item marked as read ✅",
+                );
+              } else {
+                GlossySnackBar.show(
+                  context,
+                  message: "$item deleted ❌",
+                  isError: true,
+                );
+              }
             },
             background: Container(
               decoration: BoxDecoration(
@@ -82,6 +93,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               ),
             ),
           );
+
         },
       ),
     );

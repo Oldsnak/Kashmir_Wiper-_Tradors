@@ -1,22 +1,14 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:kashmir_wiper_tradors/Pages/Dashboard/widgets/dashboard_categories.dart';
-import 'package:kashmir_wiper_tradors/common/widgets/custom_appbar/appbar.dart';
 import 'package:kashmir_wiper_tradors/common/widgets/custom_appbar/custom_appbar.dart';
 import 'package:kashmir_wiper_tradors/common/widgets/custom_shapes/category_display/Category.dart';
 
-import '../../Widgets/COBC.dart';
-import '../../Widgets/drawer.dart';
 import '../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../common/widgets/custom_shapes/containers/searc_container.dart';
 import '../../common/widgets/layouts/grid_layout.dart';
 import '../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../common/widgets/texts/section_heading.dart';
-import '../../utils/constants/colors.dart';
-import '../../utils/constants/image_strings.dart';
 import '../../utils/constants/sizes.dart';
-import '../item.dart';
 
 
 class dashboard extends StatelessWidget {
@@ -68,11 +60,14 @@ class dashboard extends StatelessWidget {
                 children: [
 
                   SizedBox(height: TSizes.spaceBtwSections/2,),
+                  CategoryName(name: "Wipers"),
+                  SizedBox(height: TSizes.spaceBtwItems,),
+                  GridLayout(itemCount: 8, itemBuilder: (_, index)=>ProductCardVertical(remaining: 234550, total_stock: 300000, price: 320, name: 'Wiper', total_profit: 26500,)),
+
+                  SizedBox(height: TSizes.spaceBtwSections*2,),
                   CategoryName(name: "Jala Bursh"),
                   SizedBox(height: TSizes.spaceBtwItems,),
-
-                  // Popular Products
-                  GridLayout(itemCount: 6, itemBuilder: (_, index)=>ProductCardVertical(remaining: 234500, total_stock: 300000, price: 330, name: 'Jala Bursh', total_profit: 26500,)),
+                  GridLayout(itemCount: 6, itemBuilder: (_, index)=>ProductCardVertical(remaining: 204500, total_stock: 300000, price: 330, name: 'Jala Bursh', total_profit: 26500,)),
                 ],
               ),
             ),

@@ -43,15 +43,15 @@ class TProductCardhohrizontal extends StatelessWidget {
                   ),
                 ),
 
-                Positioned(
-                    top: -9,
-                    right: -10,
-                    child: TCircularIcon(
-                      icon: Icons.favorite,
-                      color: Colors.red,
-                      backgroundColor: Colors.transparent,
-                    )
-                )
+                // Positioned(
+                //     top: -9,
+                //     right: -10,
+                //     // child: TCircularIcon(
+                //     //   icon: Icons.favorite,
+                //     //   color: Colors.red,
+                //     //   backgroundColor: Colors.transparent,
+                //     // )
+                // )
               ],
             ),
           ),

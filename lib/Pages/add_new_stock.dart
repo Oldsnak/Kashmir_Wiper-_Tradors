@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kashmir_wiper_tradors/common/widgets/texts/newStockDetails.dart';
 import 'package:kashmir_wiper_tradors/utils/constants/colors.dart';
 import 'package:kashmir_wiper_tradors/utils/constants/sizes.dart';
 

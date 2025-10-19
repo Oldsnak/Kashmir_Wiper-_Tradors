@@ -3,13 +3,9 @@ import 'package:kashmir_wiper_tradors/Pages/Sell/widgets/sell_item_cart.dart';
 import 'package:kashmir_wiper_tradors/utils/constants/colors.dart';
 import 'package:kashmir_wiper_tradors/utils/constants/sizes.dart';
 import 'package:kashmir_wiper_tradors/utils/helpers/helper_functions.dart';
-
-import '../../common/widgets/custom_appbar/custom_appbar.dart';
 import '../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../common/widgets/custom_shapes/containers/searc_container.dart';
 import '../../common/widgets/texts/section_heading.dart';
-import '../../utils/constants/image_strings.dart';
-import '../Sales/widgets/sales_person_Icon.dart';
+
 // import 'package:toggle_switch/toggle_switch.dart';
 
 

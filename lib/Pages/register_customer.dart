@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kashmir_wiper_tradors/utils/helpers/helper_functions.dart';
 
-import '../Widgets/drawer.dart';
 import '../common/widgets/custom_appbar/appbar.dart';
-import '../common/widgets/custom_appbar/custom_appbar.dart';
 import '../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../common/widgets/custom_shapes/containers/searc_container.dart';
 import '../common/widgets/notification_icon/notification_Icon.dart';
@@ -13,8 +11,6 @@ import '../utils/constants/image_strings.dart';
 import '../utils/constants/sizes.dart';
 import '../utils/constants/text_strings.dart';
 import 'Sales/widgets/sales_person_Icon.dart';
-import 'customer_details.dart';
-import 'new_customer.dart';
 
 class register_customer extends StatelessWidget{
   @override

@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:kashmir_wiper_tradors/Pages/Sales/widgets/sales_person_Icon.dart';
 import 'package:kashmir_wiper_tradors/Pages/Sales/sales_bill.dart';
 import 'package:kashmir_wiper_tradors/utils/helpers/helper_functions.dart';
 
-import '../../Widgets/drawer.dart';
 import '../../common/widgets/custom_appbar/custom_appbar.dart';
 import '../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../common/widgets/custom_shapes/containers/searc_container.dart';
-import '../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../common/widgets/texts/section_heading.dart';
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/image_strings.dart';
 import '../../utils/constants/sizes.dart';
-import '../Dashboard/widgets/dashboard_categories.dart';
-import '../customer_details.dart';
-import '../item.dart';
-import '../new_customer.dart';
 
 class sales extends StatelessWidget{
   @override

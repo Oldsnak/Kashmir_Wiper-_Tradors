@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 
 import '../Pages/add_category.dart';
 import '../Pages/add_item.dart';
-import '../Pages/add_new_stock.dart';
-import '../Pages/register_customer.dart';
 import '../Pages/remove_items.dart';
 
 class Dr extends StatelessWidget{
