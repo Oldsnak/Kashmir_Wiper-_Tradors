@@ -64,18 +64,25 @@ class SalesService {
 
         await _client.from("sales").insert(saleMap);
 
-        // ---------- STOCK RPC ----------
-        final stockRes = await _client.rpc(
-          'decrease_product_stock',
-          params: {
-            'p_product_id': item.productId,
-            'p_qty': item.quantity,
-          },
-        );
-
-        // Supabase RPC often returns integer, so check only null:
-        if (stockRes == null) {
-          throw Exception("Stock RPC failed for ${item.productId}");
+        // ---------- UPDATE STOCK DIRECTLY ----------
+        // Get current stock and decrease it
+        try {
+          final productRes = await _client
+              .from('products')
+              .select('stock_quantity')
+              .eq('id', item.productId)
+              .single();
+          
+          final currentStock = (productRes['stock_quantity'] as num?)?.toInt() ?? 0;
+          final newStock = currentStock - item.quantity;
+          
+          await _client
+              .from('products')
+              .update({'stock_quantity': newStock})
+              .eq('id', item.productId);
+        } catch (stockError) {
+          print("⚠️ Stock update warning for ${item.productId}: $stockError");
+          // Continue even if stock update fails - bill is more important
         }
       }
 

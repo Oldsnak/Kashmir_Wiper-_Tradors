@@ -182,12 +182,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
           await _client.from("customer_debts").insert({
             'customer_id': customerId,
             'bill_id': billId,
-            'debt_amount': widget.total,
-            'paid_amount': paidAmount,
-            'remaining_amount': remaining,
-            'due_date': DateTime.now()
-                .add(const Duration(days: 7))
-                .toIso8601String(),
+            'debt_amount': remaining,
           });
         } else {
           await _client.from("customer_debts").delete().eq('bill_id', billId);
